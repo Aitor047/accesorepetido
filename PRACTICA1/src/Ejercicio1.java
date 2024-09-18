@@ -10,82 +10,36 @@ public class Ejercicio1 {
             //PRIMER NUMERO
             System.out.println("Escribe el primer numero");
             int uno = Integer.parseInt(bf.readLine());
-            if (Impar(uno)) {
-                System.out.println(uno + " es impar");
-            } else {
-                System.out.println(uno + " no es impar");
-            }
-            if (mayorQue(uno)) {
-                System.out.println(uno + " es mayor que 5");
-            } else if (igualQue(uno)) {
-                System.out.println(uno + " es igual que 5");
-            } else if (menorQue(uno)) {
-                System.out.println(uno + " es menor que 10");
-            }
+            System.out.println(uno + (Impar(uno) ? " es impar" : " no es impar"));
+            System.out.println(uno + (mayorQue(uno) ? " es mayor que 5" : "") + (igualQue(uno) ? " es igual que 5" : "") + (menorQue(uno) ? " es menor que 10" : ""));
 
             //SEGUNDO NUMERO
             System.out.println("Escribe el segundo numero");
             int dos = Integer.parseInt(bf.readLine());
-            if (Impar(dos)) {
-                System.out.println(dos + " es impar");
-            } else {
-                System.out.println(dos + " no es impar");
-            }
-            if (mayorQue(dos)) {
-                System.out.println(dos + " es mayor que 5");
-            } else if (igualQue(dos)) {
-                System.out.println(dos + " es igual que 5");
-            } else if (menorQue(dos)) {
-                System.out.println(dos + " es menor que 10");
-            }
+            System.out.println(dos + (Impar(dos) ? " es impar" : " no es impar"));
+            System.out.println(dos + (mayorQue(dos) ? " es mayor que 5" : "") + (igualQue(dos) ? " es igual que 5" : "") + (menorQue(dos) ? " es menor que 10" : ""));
+            System.out.println(dos + (yaIntroducido(uno, dos) ? " ya a sido introducido anteriormente" : ""));
 
             //TERCER NUMERO
             System.out.println("Escribe el tercer numero");
             int tres = Integer.parseInt(bf.readLine());
-            if (Impar(tres)) {
-                System.out.println(tres + " es impar");
-            } else {
-                System.out.println(tres + " no es impar");
-            }
-            if (mayorQue(tres)) {
-                System.out.println(tres + " es mayor que 5");
-            } else if (igualQue(tres)) {
-                System.out.println(tres + " es igual que 5");
-            } else if (menorQue(tres)) {
-                System.out.println(tres + " es menor que 10");
-            }
+            System.out.println(tres + (Impar(tres) ? " es impar" : " no es impar"));
+            System.out.println(tres + (mayorQue(tres) ? " es mayor que 5" : "") + (igualQue(tres) ? " es igual que 5" : "") + (menorQue(tres) ? " es menor que 10" : ""));
+            System.out.println(tres + (yaIntroducido(tres, uno) ? " ya a sido introducido anteriormente" : "") + (yaIntroducido(tres, dos) ? " ya a sido introducido anteriormente" : ""));
 
             //CUARTO NUMERO
             System.out.println("Escribe el cuarto numero");
             int cuatro = Integer.parseInt(bf.readLine());
-            if (Impar(cuatro)) {
-                System.out.println(cuatro + " es impar");
-            } else {
-                System.out.println(cuatro + " no es impar");
-            }
-            if (mayorQue(cuatro)) {
-                System.out.println(cuatro + " es mayor que 5");
-            } else if (igualQue(cuatro)) {
-                System.out.println(cuatro + " es igual que 5");
-            } else if (menorQue(cuatro)) {
-                System.out.println(cuatro + " es menor que 10");
-            }
+            System.out.println(cuatro + (Impar(cuatro) ? " es impar" : " no es impar"));
+            System.out.println(cuatro + (mayorQue(cuatro) ? " es mayor que 5" : "") + (igualQue(cuatro) ? " es igual que 5" : "") + (menorQue(cuatro) ? " es menor que 10" : ""));
+            System.out.println(cuatro + (yaIntroducido(cuatro, uno) ? " ya a sido introducido anteriormente" : "") + (yaIntroducido(cuatro, dos) ? " ya a sido introducido anteriormente" : "") + (yaIntroducido(cuatro, tres) ? " ya a sido introducido anteriormente" : ""));
 
             //QUINTO NUMERO
             System.out.println("Escribe el quinto numero");
             int cinco = Integer.parseInt(bf.readLine());
-            if (Impar(cinco)) {
-                System.out.println(cinco + " es impar");
-            } else {
-                System.out.println(cinco + " no es impar");
-            }
-            if (mayorQue(cinco)) {
-                System.out.println(cinco + " es mayor que 5");
-            } else if (igualQue(cinco)) {
-                System.out.println(cinco + " es igual que 5");
-            } else if (menorQue(cinco)) {
-                System.out.println(cinco + " es menor que 10");
-            }
+            System.out.println(cinco + (Impar(cinco) ? " es impar" : " no es impar"));
+            System.out.println(cinco + (mayorQue(cinco) ? " es mayor que 5" : "") + (igualQue(cinco) ? " es igual que 5" : "") + (menorQue(cinco) ? " es menor que 10" : ""));
+            System.out.println(cinco + (yaIntroducido(cinco, uno) ? " ya a sido introducido anteriormente" : "") + (yaIntroducido(cinco, dos) ? " ya a sido introducido anteriormente" : "") + (yaIntroducido(cinco, tres) ? " ya a sido introducido anteriormente" : "") + (yaIntroducido(cinco, cuatro) ? " ya a sido introducido anteriormente" : ""));
 
 
         } catch (NumberFormatException e) {
@@ -102,31 +56,19 @@ public class Ejercicio1 {
     }
 
     public static boolean mayorQue(int numero) {
-        if (numero > 5) {
-            return true;
-        } 
-        return false;
+        return numero > 5;
     }
 
     public static boolean igualQue(int numero) {
-        if (numero == 5) {
-            return true;
-        } 
-        return false;
+        return numero == 5;
     }
 
-    private static boolean menorQue(int numero) {
-        if (numero < 5) {
-            return true;
-        } 
-        return false;
+    public static boolean menorQue(int numero) {
+        return numero < 10;
     }
 
     private static boolean yaIntroducido(int numero1, int numero2) {
-        if (numero1 == numero2) {
-            
-        }
-        return false;
+        return numero1 == numero2;
     }
 
 
