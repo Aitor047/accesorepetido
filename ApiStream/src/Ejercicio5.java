@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
-        List<String> nombres = Arrays.asList("Pedro", "Paco", "Jose Luis", "Sara", "Laura", "Marta", "Pepe");
-        Predicate<String> nombre = s -> s.startsWith("L");
-        List<String> pes = nombres.stream().filter(nombre).toList();
-        System.out.println(pes);
+        List<String> nombres = new ArrayList<>(Arrays.asList("Pedro", "Paco", "Jose Luis", "Sara", "Laura", "Marta", "Pepe"));
+        Predicate<String> nombre = s -> s.startsWith("P");
+        nombres.removeIf(nombre.negate());
+        System.out.println(nombres);
     }
 }
