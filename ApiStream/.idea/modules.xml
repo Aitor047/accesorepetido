@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ApiStream.iml" filepath="$PROJECT_DIR$/ApiStream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InterfacesJava.iml" filepath="$PROJECT_DIR$/InterfacesJava.iml" />
     </modules>
   </component>
 </project>
