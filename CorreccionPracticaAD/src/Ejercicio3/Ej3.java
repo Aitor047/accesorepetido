@@ -2,6 +2,8 @@ package Ejercicio3;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Ej3 {
     public static void main(String[] args) {
@@ -15,8 +17,11 @@ public class Ej3 {
         // LISTA DE NUMEROS PARES
         List<Integer> pares = numbers.stream().filter(n -> n % 2 == 0).toList();
 
+        Map<Boolean, List<Integer>> particion = numbers.stream().collect(Collectors.partitioningBy(n -> n % 2 == 0));
+        System.out.println(particion);
+
         // SOUT
-        System.out.println("Partitioned:  {impares=" + impares + ",  pares=" + pares + "}");
+        //System.out.println("Partitioned:  {impares=" + impares + ",  pares=" + pares + "}");
 
     }
 }

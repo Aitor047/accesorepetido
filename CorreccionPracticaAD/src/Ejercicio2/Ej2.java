@@ -30,7 +30,7 @@ public class Ej2 {
                 StringTokenizer tokenizer = new StringTokenizer(linea);
                 while (tokenizer.hasMoreTokens()){
                     String token = tokenizer.nextToken();
-                    
+
                 }
             }
 
