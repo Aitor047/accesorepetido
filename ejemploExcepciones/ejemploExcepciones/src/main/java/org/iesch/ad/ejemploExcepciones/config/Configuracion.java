@@ -1,6 +1,7 @@
 package org.iesch.ad.ejemploExcepciones.config;
 
 import org.iesch.ad.ejemploExcepciones.model.Usuario;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 @Configuration
 public class Configuracion {
 
+    @Bean
     List<Usuario> usuarios(){
         List<Usuario> usuarios = new ArrayList<>();
         usuarios.add(Usuario.builder().id(1).nombre("Aitor").apellidos("Monzon").build());
